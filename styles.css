@@ -1,0 +1,141 @@
+/* adding styles from a link*/
+@import url('<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Playfair+Display:wght@800&family=Poppins:wght@300&display=swap");
+/* creating custom properties to reference in the styling below*/
+:root{
+    --light-color: #fff;
+    --dark-color: #171721;
+    --dark-color-lighter: #7e8299;
+    --accent-color: #22beaa;
+    --body-background-color: #20b2aa;
+    --border-bottom-color: rgba(255,255,255,.05);
+    --transparent-button-color: rgba(255,255,255,.1);
+    --font-size-small: 1.4rem;
+    --font-size-normal: 1.6rem;
+    --font-size-medium: 2rem;
+    --font-size-large: 2.4rem;
+    --font-family: 'Poppins', sans-serif;
+    --margin-small: 1rem;
+    --margin-medium: 1.5rem;
+    --gap-medium: 1rem;
+    --gap-medium: 2.5rem;
+}
+/* this dashboard has a light and dark mode toggle*/
+.theme-light{
+    --light-color: #171721;
+    --dark-color: #fff;
+    --dark-color-lighter: #7e8299;
+    --body-background-color: #eef0f8;
+    --border-bottom-color: rgba(23,23,23,.05);
+    --transparent-bottom-color: var(--accent-color);
+}
+/* base styles*/
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    font-family: var(--font-family);
+    font-size: var(--font-size-normal);
+    color: var(--light-color);
+    line-height: 1.5;
+    background-color: var(--body-background-color);
+}
+img{
+    max-width: 100%;
+    display: block;
+    z-index: -1;
+    height: 100%;
+}
+/* styling the light and dark theme buttons*/
+button{
+    font: inherit;
+    color: inherit;
+    background-color: transparent;
+    border: none;
+    border-radius: .4rem;
+    cursor: pointer;
+}
+/* styling the icons of the light and dark themes*/
+i{
+    font-size: var(--font-size-large);
+    line-height: 0;
+}
+/* this will style any container on the page*/
+.container{
+    max-width: 134rem;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+/* placement of the theme icons on the page*/
+.placed-items-center{
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+}
+
+.d-grid{
+    display: grid;
+}
+/* styling the background image*/
+.floating-background-image{
+    height: 45rem;
+    z-index: -1;
+}
+
+/*.floating-background-image img{
+    height: 100%;
+    object-fit: cover;
+}
+/* styling the header*/
+.header{
+    background-color: var(--dark-color);
+}
+.header h1{
+    font-size: var(--font-size-large);
+    font-family: 'Playfair Display', serif;
+}
+/* styling the navigation area*/
+.nav{
+    height: 6rem;
+    display: flex;
+    align-items: center;
+}
+
+.align-right{
+    margin-left:auto;
+    background-color: var(--accent-color);
+    border-radius: 4rem;
+}
+
+.icon-btn{
+    width: 3.5rem;
+    height: 3.8rem;
+}
+
+.theme-dark-icon{
+    display: none;
+}
+
+/*javascript styles*/
+.theme-light .theme-dark-icon{
+    display: block;
+}
+
+.current{
+    color: var(--dark-color);
+}
+
+.theme-light .theme-light-icon{
+    display: none;
+}
+
