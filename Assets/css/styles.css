@@ -1,7 +1,7 @@
 /* adding styles from a link*/
-@import url('<link rel="preconnect" href="https://fonts.googleapis.com">
+@import url(<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Playfair+Display:wght@800&family=Poppins:wght@300&display=swap");
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=Playfair+Display:wght@800&family=Poppins:wght@300&display=swap" rel="stylesheet">);
 /* creating custom properties to reference in the styling below*/
 :root{
     --light-color: #fff;
@@ -18,7 +18,7 @@
     --font-family: 'Poppins', sans-serif;
     --margin-small: 1rem;
     --margin-medium: 1.5rem;
-    --gap-medium: 1rem;
+    --gap-small: 1rem;
     --gap-medium: 2.5rem;
 }
 /* this dashboard has a light and dark mode toggle*/
@@ -114,19 +114,33 @@ i{
     right: 0;
     z-index: -1;
 }
-
 .floating-background-image img{
     height: 100%;
     width: 100%;
     object-fit: cover;
 }
+
+
+
 /* styling the header*/
 .header{
     background-color: var(--dark-color);
 }
+
+.theme-light .header{
+    background-color: #20b2aa;
+}
+.theme-light .header h1{
+    font-size: var(--font-size-large);
+    font-family: 'Playfair Display', serif;
+     color: black;
+}
+
+
 .header h1{
     font-size: var(--font-size-large);
     font-family: 'Playfair Display', serif;
+     color: #20b2aa;
 }
 /* styling the navigation area*/
 .nav{
@@ -163,3 +177,58 @@ i{
     display: none;
 }
 
+.nav-links {
+    flex: 1;
+    text-align: center;
+    z-index: 180;
+    text-decoration: none;
+}
+
+.nav-links ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 8px 12px;
+    position: relative;
+}
+
+.theme-light .nav-links ul li a {
+    color: black;
+    text-decoration: none;
+    font-size: 15px;
+    font-family:'Courier New', Courier, monospace;
+    padding: 22px;
+}
+
+.nav-links ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-family:'Courier New', Courier, monospace;
+    padding: 22px;
+}
+
+.dropdown{
+    display: none;
+}
+
+
+.nav-links ul li:hover .dropdown{
+    display: block;
+    position: absolute;
+    background-color: #20b2aa;
+    margin-top: 15px;
+    margin-left: -80px;
+    margin-right: 0;
+}
+
+.container1 img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+h2{
+    font-size: var(--font-size-medium);
+    font-family: 'Merriweather', serif;
+}

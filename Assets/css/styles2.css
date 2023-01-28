@@ -1,0 +1,17 @@
+body {
+    font: 10pt arial;
+  }
+  div#info {
+    width: 500px;
+    text-align: center;
+    margin-top: 2em;
+    font-size: 1.2em;
+  }
+  span#graphHead,
+  span#updateTime,
+  span#startTime,
+  span#endTime {
+    font: 10pt arial;
+    font-weight: bold;
+    text-align: center;
+  }
