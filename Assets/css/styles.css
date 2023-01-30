@@ -86,11 +86,14 @@ i{
 .grid-container{
     display: grid;
     background-color:lightgray transparent ;
-    grid-template-columns: auto auto;
+    grid-template-columns: auto;
+    justify-content: space-evenly;
     gap: 10px;
     padding: 10px;
     align-items: center;
     justify-items: center;
+    align-content: center;
+    
 
 }
 .grid-container > div{
@@ -119,11 +122,13 @@ i{
     left: 0;
     right: 0;
     z-index: -1;
+    
 }
 .floating-background-image img{
     height: 100%;
     width: 100%;
     object-fit: cover;
+    
 }
 
 
@@ -141,6 +146,7 @@ i{
     font-family: 'Playfair Display', serif;
      color: black;
 }
+
 
 .header h1{
     font-size: var(--font-size-large);
@@ -216,7 +222,6 @@ i{
     display: none;
 }
 
-
 .nav-links ul li:hover .dropdown{
     display: block;
     position: absolute;
@@ -225,18 +230,20 @@ i{
     margin-left: -80px;
     margin-right: 0;
 }
-
 .container1 img{
     height: 100%;
     width: 100%;
     object-fit: cover;
     z-index: -1;
+    opacity: .5;
 }
 
 h2{
     font-size: var(--font-size-medium);
     font-family: 'Merriweather', serif;
 }
+
 h1{
     text-align:center;
 }
+
