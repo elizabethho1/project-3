@@ -74,6 +74,7 @@ i{
 .container{
     max-width: 134rem;
     margin: 0 auto;
+    align-items: center;
     padding: 0 1.5rem;
 }
 /* placement of the theme icons on the page*/
@@ -89,11 +90,20 @@ i{
     grid-template-columns: auto auto;
     gap: 10px;
     padding: 10px;
+    align-items: center;
+    justify-items: center;
+    
 
 }
 .grid-container > div{
     background-color: white;
     padding: 20px 0;
+    opacity: .9;
+    display: inline-block;
+    margin-bottom: .833em;
+    text-align: center;
+    font-size: 30px;
+    height: auto;
 }
 .grid-container h3{
     color: lightseagreen;
@@ -113,11 +123,13 @@ i{
     left: 0;
     right: 0;
     z-index: -1;
+    
 }
 .floating-background-image img{
     height: 100%;
     width: 100%;
     object-fit: cover;
+    
 }
 
 
@@ -226,9 +238,15 @@ i{
     width: 100%;
     object-fit: cover;
     z-index: -1;
+    opacity: .5;
 }
 
 h2{
     font-size: var(--font-size-medium);
     font-family: 'Merriweather', serif;
 }
+
+h1{
+    text-align:center;
+}
+
