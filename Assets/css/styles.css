@@ -232,3 +232,6 @@ h2{
     font-size: var(--font-size-medium);
     font-family: 'Merriweather', serif;
 }
+h1{
+    text-align:center;
+}
